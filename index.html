@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <!-- ENTRADA DOS VALORES -->
+        <div class="input-values">
+          <div class="bill-value">
+            <h3>Bill</h3>
+            <label class="dollar-icon">
+              <input class="value" type="text" placeholder="0" />
+            </label>
+          </div>
+          <div class="tip-percent">
+            <h3>Select Tip %</h3>
+            <div class="flex-grid">
+              <button class="btn percent-value" value="5">5%</button>
+              <button class="btn percent-value" value="10">10%</button>
+              <button class="btn percent-value" value="15">15%</button>
+              <button class="btn percent-value" value="25">25%</button>
+              <button class="btn percent-value" value="50">50%</button>
+              <input class="custom-percent" type="text" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="number-people">
+            <div class="text-content">
+              <h3>Number of People</h3>
+              <p class="message hidden">Can't be zero</p>
+            </div>
+            <label class="user-icon">
+              <input class="amount-people" type="text" placeholder="0" />
+            </label>
+          </div>
+        </div>
+        <!-- RESULTADOS -->
+        <div class="output">
+          <div class="flex-itens">
+            <div class="flex-column">
+              <p class="label-tip">Tip Amount<br /><span>/Person</span></p>
+              <p class="amount">$0.00</p>
+            </div>
+            <div class="flex-column">
+              <p class="label-total">Total<br /><span>/Person</span></p>
+              <p class="total">$0.00</p>
+            </div>
+          </div>
+          <button type="button" class="btn reset">Reset</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

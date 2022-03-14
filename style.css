@@ -1,0 +1,199 @@
+:root {
+  --primary-color: hsl(183, 100%, 15%);
+  --secondary-color: hsl(172, 67%, 45%);
+  --background-color: hsl(185, 41%, 84%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.4rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-size: 1.2rem;
+}
+
+.btn.percent-value.active {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn.reset {
+  background: hsl(184, 14%, 56%);
+  border-radius: 5px;
+  margin-top: 3.5rem;
+  color: hsl(186, 14%, 43%);
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+}
+
+.container {
+  display: flex;
+  background: white;
+  padding: 1.2rem;
+  width: 600px;
+  border-radius: 15px;
+  gap: 1rem;
+}
+
+.input-values,
+.output {
+  flex: 1 1 50%;
+}
+
+.output {
+  background: var(--primary-color);
+  color: white;
+  padding: 1.2rem;
+  border-radius: 15px;
+}
+
+.output .label-tip,
+.output .label-total {
+  font-size: 0.7rem;
+}
+
+.amount,
+.total {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.flex-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.btn.percent-value {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn.percent-value:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.text-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message {
+  font-size: 0.7rem;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.output .flex-itens {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+span {
+  font-size: 0.5rem;
+  align-self: flex-start;
+}
+label {
+  position: relative;
+}
+
+input:focus {
+  outline-color: var(--secondary-color);
+}
+
+.bill-value label::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  bottom: 0;
+  width: 15px;
+  background: url("/images/icon-dollar.svg") no-repeat;
+}
+
+.number-people label::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  bottom: 0;
+  width: 15px;
+  background: url(/images/icon-person.svg) no-repeat;
+}
+
+input[type="text"] {
+  text-align: right;
+  padding: 10px 10px;
+  border: none;
+  background: hsl(189, 41%, 97%);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: hsl(184, 14%, 56%);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  .flex-grid {
+    flex-wrap: wrap;
+  }
+
+  .btn.percent-value,
+  .custom-percent {
+    flex: 47%;
+    max-width: 47%;
+    padding: 5px 0;
+  }
+}
