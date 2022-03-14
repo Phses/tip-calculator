@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://dreamy-johnson-1bd096.netlify.app/)
+- Live Site URL: [https://dreamy-johnson-1bd096.netlify.app/]
 
 ## My process
 
